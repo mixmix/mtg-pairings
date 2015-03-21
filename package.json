@@ -4,11 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "bin/build",
+    "start": "node server.js",
+    "go": "npm build & npm start",
+    "deploy": "git push heroku master",
+    "prod": "NODE_ENV=production npm start"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "pdf2json": "^0.7.1"
+    "browserify": "^9.0.3",
+    "domquery": "^1.2.0",
+    "pdf-text-extract": "^1.1.4",
+    "xhr": "^2.0.1"
   }
 }

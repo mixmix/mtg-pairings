@@ -1,0 +1,30 @@
+body, h1, h2 {
+  text-align: center;
+  font-family: "OpenSans-Light","OpenSans",sans-serif;
+  font-weight: 300;
+  color: #37362F;
+}
+
+h1 { 
+  font-size: 50px;
+  padding: 30px 0 20px;
+}
+
+img {
+  width: 300px;
+}
+
+.contributors { 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.contributor {
+  padding: 0 10px;
+}
+
+.source-link {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
