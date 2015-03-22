@@ -10,17 +10,8 @@ h1 {
   padding: 30px 0 20px;
 }
 
-img {
-  width: 300px;
-}
-
-.contributors { 
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.contributor {
-  padding: 0 10px;
+#data-box { 
+  min-height: 400px;
 }
 
 .source-link {

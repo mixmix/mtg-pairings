@@ -16,3 +16,6 @@ xhr({
   dom('#data-box').add( content )
 })
 
+document.querySelector('input').onchange = function() {
+  document.querySelector('form').submit();
+};

@@ -2,18 +2,21 @@
 <html>
   <head>
     <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,700,600" rel="stylesheet" type="text/css">
-    <script src='/app.js'></script>
     <link href='/styles.css' rel='stylesheet' />
   </head>
 
   <body>
-    <a class='source-link' href='https://github.com/...'>source</a>
-    <h1></h1>
-    <div id='data-box' class='data'></div>
-    <form action="/api/update" enctype="multipart/form-data" method="post">
-      <input type="file" name="upload" multiple="multiple"><br>
-      <input type="submit" value="Upload">
-    </form>
+    <main>
+      <a class='source-link' href='https://github.com/...'>source</a>
+      <h1></h1>
+      <div id='data-box' class='data'></div>
+
+      <form action="/api/update" enctype="multipart/form-data" method="post">
+        <input type="file" name="upload" multiple="multiple">
+        <!--<input type="submit" value="Upload">-->
+      </form>
+    </main>
+    <script src='/app.js'></script>
   </body>
 
 </html>
