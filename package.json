@@ -7,9 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "bin/build",
     "start": "node server.js",
-    "go": "npm build & npm start",
+    "go": "npm run build ; npm start",
     "deploy": "git push heroku master",
-    "prod": "NODE_ENV=production npm start"
+    "prod": "npm run build ; NODE_ENV=production npm start"
   },
   "author": "",
   "license": "ISC",
