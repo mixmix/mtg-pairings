@@ -1,10 +1,9 @@
 
-
 ## install
 
-0. Set up a heroku server
-0. `git remote add heroku _name_of_server_`
-1. `heroku plugins:install https://github.com/ddollar/heroku-build -a _name_of_server_`
-1. `heroku config:add BUILDPACK_URL=https://github.com/ddollar/heroku-buildpack-multi.git -a _name_of_server_`
-1. `heroku build . -b ddollar/multi -r  -a _name_of_server_`
-2. `git push heroku master`
+0. Set up a heroku server "my_mtg_pairings"
+1. `git remote add heroku git-location-of-server`
+2. `heroku buildpack:set https://github.com/heroku/heroku-buildpack-multi.git -a my_mtg_pairings`
+3. `git push heroku master`
+
+

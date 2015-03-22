@@ -9,7 +9,7 @@
     "start": "node server.js",
     "go": "npm run build ; npm start",
     "deploy": "git push heroku master",
-    "prod": "npm run build ; NODE_ENV=production npm start"
+    "prod": "NODE_ENV=production npm start"
   },
   "author": "",
   "license": "ISC",
