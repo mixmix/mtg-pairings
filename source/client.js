@@ -9,9 +9,8 @@ xhr({
 }, function (err, resp, body) {
   var results = JSON.parse(body)
 
-  //results.lines.forEach( addLine )
+  if (results.error) { console.error(results.error) }
   var content = '<div>' + results.lines.join('<br>').replace(/[0-9]{5,}|DCI/g,'').replace(/\s/g, '&nbsp;') + '</div>'
-  //console.log(content)
    
   dom('#data-box').add( content )
 })

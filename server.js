@@ -6,7 +6,7 @@ var formidable = require('formidable')
 
 var isProd = process.env.NODE_ENV === 'production'
 
-var filePath = path.join(__dirname, 'seatings.pdf')
+//var filePath = path.join(__dirname, 'seatings.pdf')
 var dataStore = {}
 
 //this is temporary till file upload is up:
@@ -14,6 +14,7 @@ function pdfToDataStore(filename) {
   extract(filename, function (err, pages) {
     if (err) {
       console.dir(err)
+      dataStore['error'] = JSON.stringify(err, null, 2)
       return
     }
 
@@ -33,26 +34,22 @@ function handler(req, res) {
     fs.createReadStream('./styles.css').pipe(res)
   }
   else if (req.url === '/api/pdf-data') {
-    console.log('ping')
-
     res.writeHead(200, {'content-type': 'application/json'})
     res.write(JSON.stringify(dataStore, null, 2))
     res.end()
   }
   else if (req.url === '/api/update') {
-    console.log('api/update hit')
+    //check it's a POST
 
-    var form = new formidable.IncomingForm();
+    var form = new formidable.IncomingForm()
     form.on('file', function(name, file) {
       pdfToDataStore(file.path)
-    });
+    })
 
     form.parse(req, function(err, fields, files) {
-      res.writeHead(302, {
-        'Location': '/',
-      });
-      res.end();
-    });
+      res.writeHead(302, {'Location': '/', })
+      res.end()
+    })
   }
   else {
     res.writeHead(404)
