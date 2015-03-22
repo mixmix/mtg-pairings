@@ -1,3 +1,5 @@
 seatings.pdf
 node_modules
 build
+
+npm-debug.log

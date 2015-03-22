@@ -16,10 +16,3 @@ xhr({
   dom('#data-box').add( content )
 })
 
-function addLine(line) {
-  console.log(line)
-  //dom('#data-box').add( line )
-}
-
-
-

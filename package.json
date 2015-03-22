@@ -16,6 +16,7 @@
   "dependencies": {
     "browserify": "^9.0.3",
     "domquery": "^1.2.0",
+    "formidable": "^1.0.17",
     "pdf-text-extract": "^1.1.4",
     "xhr": "^2.0.1"
   }
