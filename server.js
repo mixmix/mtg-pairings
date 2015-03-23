@@ -43,7 +43,7 @@ function handler(req, res) {
 
     var form = new formidable.IncomingForm()
     form.on('file', function(name, file) {
-      pdfToDataStore(file.path)
+      if (file.type === 'application/pdf') pdfToDataStore(file.path)
     })
 
     form.parse(req, function(err, fields, files) {
