@@ -2079,10 +2079,13 @@ function lineFixer(string) {
   return string
          .replace(/(Round [0-9]+)/,"<strong>$1</strong><br><br>")
          .replace(/[0-9]{5,}|DCI/g,'')
-         .replace(/\s/g, '&nbsp;')
          .replace(/Wizards.*LLC/,'')
          .replace(/Wizards.*(\d{4}\/\d{2}\/\d{2}.*)/, "$1")
          .replace(/(Report|Event).*/, '')
+         .replace(/Table.*Player.*/g, 'Table      Player                 Opponent               Points')
+         .replace(/\s{2}(\w)/g, '$1')
+         .replace(/\s/g, '&nbsp;')
+         .replace(/^-{20}/g, '')
 }
 
 document.querySelector('input').onchange = function() {
